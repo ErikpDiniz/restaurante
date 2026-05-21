@@ -1,0 +1,36 @@
+@baseUrl = http://localhost:8080
+
+### Cadastrar Produto
+Post {{baseUrl}}/produtos
+Content-Type: application/json
+
+{
+    "categoriaId": 2,
+    "nome": "Parmegiana de carne",
+    "descricao": "Filé de carne empanada com molho de tomate e queijo",
+    "preco": 49.90,
+    "disponivel": true,
+    "tempoPreparoMinutos": 35
+}
+
+### Listar produtos
+GET {{baseUrl}}/produtos?page=0&size=10&sort=nome,asc
+
+### Buscar produto por id
+GET {{baseUrl}}/produtos/1
+
+### Atualizar produto
+PUT {{baseUrl}}/produtos/7
+Content-Type: application/json
+
+{
+    "categoriaId": 2,
+    "nome": "bolinha de carne",
+    "descricao": "bolinha de carne frita",
+    "preco": 19.90,
+    "disponivel": true,
+    "tempoPreparoMinutos": 10
+}
+
+### Excluir produtos
+DELETE {{baseUrl}}/produtos/1

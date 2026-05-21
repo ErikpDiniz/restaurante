@@ -29,7 +29,7 @@ public class Produto {
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "categoria_id")
-    private CategoriaProdutos categoria;
+    private CategoriaProduto categoria;
 
     @PrePersist
     private void prePersist(){
@@ -105,11 +105,11 @@ public class Produto {
         this.atualizadoEm = atualizadoEm;
     }
 
-    public CategoriaProdutos getCategoria() {
+    public CategoriaProduto getCategoria() {
         return categoria;
     }
 
-    public void setCategoria(CategoriaProdutos categoria) {
+    public void setCategoria(CategoriaProduto categoria) {
         this.categoria = categoria;
     }
 }
