@@ -1,10 +1,7 @@
 package dev.erik.restaurante.entity;
 
-import dev.erik.restaurante.domain.enums.StatusMesa;
 import dev.erik.restaurante.domain.enums.StatusPedido;
 import jakarta.persistence.*;
-
-import java.sql.Timestamp;
 import java.time.LocalDateTime;
 
 @Entity
